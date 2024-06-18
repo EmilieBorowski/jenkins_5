@@ -8,18 +8,17 @@ pipeline {
             }
             failFast true                           // get instant feedback when a job fails
             parallel {
-                stages{
-                    stage('Part One Parallel') {
-                        steps {
-                            echo "In Part One Parallel... "
-                        }
-                    }
-                    stage('Part Two Parallel') {
-                        steps {
-                            echo "In Part Two Parallel... "
-                        }
+                stage('Part One Parallel') {
+                    steps {
+                        echo "In Part One Parallel... "
                     }
                 }
+                stage('Part Two Parallel') {
+                    steps {
+                        echo "In Part Two Parallel... "
+                    }
+                }
+                
             }
         }
 
