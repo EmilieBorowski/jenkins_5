@@ -10,8 +10,8 @@ pipeline {
                 VAR_TWO = 'value two -5b'
             }
             step {
-                echo "value one "${VAR_ONE}"
-                echo "value two "${VAR_two}"
+                echo "value one ${VAR_ONE}"
+                echo "value two ${VAR_two}"
             }
 
         }
