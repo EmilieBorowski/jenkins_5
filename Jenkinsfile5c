@@ -13,7 +13,7 @@ pipeline {
         stage('Validate') {
             input {
                 message "Are API changes adhering to design rules?"
-                ok "Yes, proceed"
+                ok "Oui Oui"
             }
             steps {
                 echo "In Validate Stage"
