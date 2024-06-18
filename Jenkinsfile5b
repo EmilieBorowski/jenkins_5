@@ -8,6 +8,12 @@ pipeline {
         timestamps()
     }
     stages {
+        stage('Setup'){
+            parameters {
+              choice choices: ['PCR', 'RELEASE'], description: 'choose your build tyoe', name: 'BUILD_TYPE'
+            }
+        }
+
         stage('Build') {
             environment {
                 VAR_TWO = 'value two -5b'
@@ -16,8 +22,7 @@ pipeline {
                 echo "value one ${env.VAR_ONE}"
                 echo "value two ${env.VAR_two}"
             }
-
-        }
+        } // end of build stage
 
     }
 
