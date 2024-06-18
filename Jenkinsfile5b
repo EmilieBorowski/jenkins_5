@@ -15,12 +15,12 @@ pipeline {
             name: 'BUILD_TYPE'
         )
         string (
-            name: 'STRING_NAME'
-            defaultValue: 'Emilie'
+            name: 'STRING_NAME',
+            defaultValue: 'Emilie',
             description: 'Your first name'
         )
         booleanParam (
-            name: 'ITS_EITHER_A_YES_OR_A_NO'
+            name: 'ITS_EITHER_A_YES_OR_A_NO',
             description: 'Pick either or :)'
         )
     }
