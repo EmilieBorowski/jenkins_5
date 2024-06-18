@@ -33,7 +33,5 @@ pipeline {
                 echo "${params.BUILD_TYPE}"
             }
         } // end of build stage
-
     }
-
 }
