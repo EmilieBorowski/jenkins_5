@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    stages{
+
+        stage('Parallel Stage') {
+            options {
+                timestamps()
+            }
+            failFast true                           // get instant feedback when a job fails
+            parallel {
+                stage('Part One Parallel') {
+                    steps {
+                        echo "In Part One Parallel... "
+                    }
+                }
+                stage('Part Two Parallel') {
+                    steps {
+                        echo "In Part Two Parallel... "
+                    }
+                }
+
+            }
+            steps {
+                echo "Parallel Stage One"
+            }
+        }
+
+        stage('Sequential Stage') {
+            steps {
+                echo "in sequential stage"
+            }
+
+        }
+
+
+    }
+
+
+}
