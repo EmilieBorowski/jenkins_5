@@ -1,6 +1,8 @@
 pipeline {
-
     agent any
+    trigger {
+        cron('* * * * *')
+    }
     environment {
         VAR_ONE = 'value one -5b'
     }
