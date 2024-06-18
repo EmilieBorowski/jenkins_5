@@ -4,6 +4,7 @@ pipeline{
         stage('Build'){
             steps {
                 echo 'Pipeline Build Step'
+                w
             }
         }
     }
@@ -18,5 +19,5 @@ pipeline{
             echo "Failure section running"
         }
     }
-    
+
 }
