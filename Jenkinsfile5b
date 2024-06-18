@@ -24,8 +24,8 @@ pipeline {
             description: 'Pick either or :)'
         )
         text (
-            name: 'DEFAULT_TEXT'
-            defaultValue: 'This is just the default text'
+            name: 'DEFAULT_TEXT',
+            defaultValue: 'This is just the default text',
             description: 'This contains some text'
         )
     }
