@@ -7,18 +7,17 @@ pipeline {
     options {
         timestamps()
     }
+    parameters {
+        choice (
+            choices: ['PCR', 'RELEASE'],
+            name: 'BUILD_TYPE'
+        )
+    }
+
     stages {
         stage('Setup'){
             steps {
-                script{
-                    parameters(
-                      choice(
-                        name: 'BUILD_TYPE',
-                        choices: ['PCR', 'RELEASE'],
-                        description: 'choose your build type'
-                      )
-                    )
-                }
+                echo "Chosen build type: ${params.BUILD_TYPE}"
             }
         }
 
