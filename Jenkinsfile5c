@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Validate') {
             input {
-                message: "Are API changes adhering to design rules?"
+                message "Are API changes adhering to design rules?"
                 ok "Yes, proceed"
             }
             steps {
