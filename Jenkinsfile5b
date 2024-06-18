@@ -14,6 +14,11 @@ pipeline {
             choices: ['PCR', 'RELEASE'],
             name: 'BUILD_TYPE'
         )
+        string (
+            name: 'STRING_NAME'
+            defaultValue: 'Emilie'
+            description: 'Your first name'
+        )
     }
 
     stages {
