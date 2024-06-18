@@ -8,10 +8,10 @@ pipeline {
         timestamps()
     }
     parameters {
-        choice 
+        choice (
             choices: ['PCR', 'RELEASE'],
             name: 'BUILD_TYPE'
-
+        )
     }
 
     stages {
