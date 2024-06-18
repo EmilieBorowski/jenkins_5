@@ -1,0 +1,21 @@
+pipeline {
+
+    agent any
+    environment {
+        VAR_ONE = 'value one -5b'
+    }
+    stages {
+        stage('Build') {
+            environment {
+                VAR_TWO = 'value two -5b'
+            }
+            step {
+                echo "value one "${VAR_ONE}"
+                echo "value two "${VAR_two}"
+            }
+
+        }
+
+    }
+
+}
