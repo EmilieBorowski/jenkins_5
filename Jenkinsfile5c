@@ -1,0 +1,15 @@
+pipeline {
+
+    agent any
+    tools {
+        maven 'apache-maven-3.9.2'
+    }
+    stages{
+        stage('Build') {
+            steps {
+                bat 'mvn -version'
+            }
+        }
+    }
+
+}
