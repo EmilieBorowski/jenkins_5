@@ -10,15 +10,14 @@ pipeline {
     stages {
         stage('Setup'){
             steps {
-                parameters(
-                  choice(
-                    name: 'BUILD_TYPE',
-                    choices: ['PCR', 'RELEASE'],
-                    description: 'choose your build type'
-                  )
-                )
-                script {
-                    echo "Chosen Choice: ${params.BUILD_TYPE}"
+                script{
+                    parameters(
+                      choice(
+                        name: 'BUILD_TYPE',
+                        choices: ['PCR', 'RELEASE'],
+                        description: 'choose your build type'
+                      )
+                    )
                 }
             }
         }
@@ -30,6 +29,7 @@ pipeline {
             steps {
                 echo "value one ${env.VAR_ONE}"
                 echo "value two ${env.VAR_two}"
+                echo "${params.BUILD_TYPE}"
             }
         } // end of build stage
 
