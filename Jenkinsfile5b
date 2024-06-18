@@ -10,13 +10,13 @@ pipeline {
     stages {
         stage('Setup'){
             steps {
-                parameters {
+                parameters(
                   choice(
                     name: 'BUILD_TYPE',
                     choices: ['PCR', 'RELEASE'],
                     description: 'choose your build type'
                   )
-                }
+                )
                 script {
                     echo "Chosen Choice: ${params.BUILD_TYPE}"
                 }
