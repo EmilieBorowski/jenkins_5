@@ -11,13 +11,21 @@ pipeline {
             }
         }
         stage('Validate') {
-            input {
+            input {                                                      // require user input
                 message "Are API changes adhering to design rules?"
                 ok "Oui Oui"
             }
             steps {
                 echo "In Validate Stage"
             }
+        }
+        stage('Documentation') {
+               when {
+                    changeset "**/*.txt"                                    // process txt files
+               }
+               steps {
+                    echo "Processing documentation..."
+               }
         }
     }
 
