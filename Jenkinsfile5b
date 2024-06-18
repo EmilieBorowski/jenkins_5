@@ -9,10 +9,11 @@ pipeline {
     }
     stages {
         stage('Setup'){
-            parameters {
-              choice choices: ['PCR', 'RELEASE'], description: 'choose your build tyoe', name: 'BUILD_TYPE'
+            steps {
+                parameters {
+                  choice choices: ['PCR', 'RELEASE'], description: 'choose your build tyoe', name: 'BUILD_TYPE'
+                }
             }
-            steps {}
         }
 
         stage('Build') {
