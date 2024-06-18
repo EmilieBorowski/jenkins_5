@@ -10,6 +10,15 @@ pipeline {
                 sh 'mvn -version'
             }
         }
+        stage('Validate') {
+            input {
+                message: "Are API changes adhering to design rules?"
+                ok "Yes, proceed"
+            }
+            steps {
+                echo "In Validate Stage"
+            }
+        }
     }
 
 }
