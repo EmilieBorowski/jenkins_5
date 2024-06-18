@@ -21,9 +21,6 @@ pipeline {
                     }
                 }
             }
-            steps {
-                echo "Parallel Stage One"
-            }
         }
 
         stage('Sequential Stage') {
