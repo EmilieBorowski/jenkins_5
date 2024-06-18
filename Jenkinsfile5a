@@ -6,6 +6,17 @@ pipeline{
                 echo 'Pipeline Build Step'
                 // error("This will throw an error ...")
             }
+            post {
+                always {
+                    echo "Alway section in build running..."
+                }
+                success {
+                    echo "Success section in build running..."
+                }
+                failure {
+                    echo "Failure section in build running...."
+                }
+            }
         }
     }
     post {
