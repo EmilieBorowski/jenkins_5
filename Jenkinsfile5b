@@ -9,7 +9,7 @@ pipeline {
             environment {
                 VAR_TWO = 'value two -5b'
             }
-            step {
+            steps {
                 echo "value one ${env.VAR_ONE}"
                 echo "value two ${env.VAR_two}"
             }
