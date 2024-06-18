@@ -23,6 +23,11 @@ pipeline {
             name: 'ITS_EITHER_A_YES_OR_A_NO',
             description: 'Pick either or :)'
         )
+        text (
+            name: 'DEFAULT_TEXT'
+            defaultValue: 'This is just the default text'
+            description: 'This contains some text'
+        )
     }
 
     stages {
