@@ -36,6 +36,7 @@ pipeline {
                 echo "Chosen build type: ${params.BUILD_TYPE}"
                 echo "${params.STRING_NAME}"
                 echo "${params.ITS_EITHER_A_YES_OR_A_NO}"
+                echo "${params.DEFAULT_TEXT}"
             }
         }
 
